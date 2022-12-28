@@ -11,6 +11,7 @@ token = open("token.txt", "r").read()
 # change cwd in case this is called from shell script
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
+# create data objects, reading in data
 text_data = input_text_parser(text_path)
 file_data = input_image_parser(image_path)
 
@@ -22,6 +23,9 @@ async def on_ready():
     
 @client.event
 async def on_message(message):
+   """
+   Main work method, called whenever someone posts a message
+   """
    # don't respond to self, empty messages, or messages that don't start with a bang
    if message.author == client.user or \
       len(message.content) == 0 or \

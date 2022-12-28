@@ -18,6 +18,9 @@ def get_contents(key_dict):
 
 class input_text_parser:
    def __init__(self, dir_path):
+      """
+      Initializer; needs file path (string) to where text files are stored.
+      """
       self.dict = {}       # case-sensitive dict
       self.key_dict = {}   # pairs of (key.lower, key)
       self.topic_list = ""
@@ -27,6 +30,9 @@ class input_text_parser:
       self.topic_list = self.topic_list.strip()
    
    def _load(self, dir_path, file_name):
+      """
+      Inner method to load contents of a single text file, storing metadata.
+      """
       content_string = ""
       content_category = file_name.split('.')[0]
       content_list = ""
@@ -88,6 +94,9 @@ class input_text_parser:
 
 class input_image_parser:
    def __init__(self, dir_path):
+      """
+      Initializer; needs file path (string) to where image files are stored.
+      """
       self.dict = {}       # pairs of (name, dir/name.ext)
       self.key_dict = {}   # pairs of (key.lower, key)
       file_list = os.listdir(dir_path)
