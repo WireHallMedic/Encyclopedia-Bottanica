@@ -116,24 +116,3 @@ class input_image_parser:
       for element in key_arr:
          out_str += f"{element}\n"
       return out_str.strip()
-
-
-if __name__ == "__main__":
-#    reader = input_text_parser("./text")
-#    print(reader.dict.keys())
-#    print(reader.dict.values())
-#    print(reader.key_dict.keys())
-#    print(reader.key_dict.values())
-#    print(reader.get("first thing"))
-#    print(reader.get("pants"))
-#    print(reader.get("FiRsT tHiNg"))
-  # toc = reader.get_contents()
-   #print(reader.get("first thing"))
-#    print(reader.get_contents())
-#    print(reader.get("category 1"))
-   # 
-   reader = input_image_parser("./images")
-   print(reader.dict.keys())
-   print(reader.dict.values())
-   print(reader.get("ricci"))
-   print(reader.get_contents())
