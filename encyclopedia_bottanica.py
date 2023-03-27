@@ -36,6 +36,11 @@ async def on_message(message):
    # clean message
    cmd = message.content[1:].strip().lower()
    
+   # bot info
+   if cmd == "encyclopedia bottanica":
+      out_str = "I am an encyclopedia. Enter '!toc' or '!contents' for a table of contents.\n" + \
+         "Enter '!<entry name>' to view an entry. I am case-insensitive."
+   
    # user requests table of contents
    if cmd == "contents" or cmd == "toc":
       out_str = f"I have information on the following categories:\n{text_data.get_contents()}\n" + \
